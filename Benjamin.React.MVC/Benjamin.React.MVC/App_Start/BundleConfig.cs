@@ -25,9 +25,10 @@ namespace Benjamin.React.MVC
                       "~/Content/site.css"));
 
             bundles.Add(IncludeReactJsComponents());
+            bundles.Add(IncludeCommonComponentsScripts());
 
             // Doe development mode.
-            BundleTable.EnableOptimizations = false;
+            //BundleTable.EnableOptimizations = false;
         }
 
         private static ScriptBundle IncludeReactJsComponents()
@@ -39,6 +40,14 @@ namespace Benjamin.React.MVC
                 "~/Scripts/React/Common/es5-shim.min.js",
                 "~/Scripts/React/react.js",
                 "~/Scripts/React/react-with-addons.js");
+
+            return bundle;
+        }
+
+        private static ScriptBundle IncludeCommonComponentsScripts()
+        {
+            var bundle = new ScriptBundle("~/bundles/common-components");
+            bundle.Include("~/Scripts/Components/*.js");
 
             return bundle;
         }
