@@ -23,6 +23,24 @@ namespace Benjamin.React.MVC
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+
+            bundles.Add(IncludeReactJsComponents());
+
+            // Doe development mode.
+            BundleTable.EnableOptimizations = false;
+        }
+
+        private static ScriptBundle IncludeReactJsComponents()
+        {
+            var bundle = new ScriptBundle("~/bundles/react-core");
+            bundle.Include(
+                "~/Scripts/React/Common/console-polyfill.js",
+                "~/Scripts/React/Common/es5-sham.min.js",
+                "~/Scripts/React/Common/es5-shim.min.js",
+                "~/Scripts/React/react.js",
+                "~/Scripts/React/react-with-addons.js");
+
+            return bundle;
         }
     }
 }

@@ -187,6 +187,8 @@
     <Content Include="Scripts\jquery-2.1.4.js" />
     <Content Include="Scripts\jquery-2.1.4.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\React\Common\console-polyfill.js" />
+    <Content Include="Scripts\React\Common\es5-shim.min.js" />
     <Content Include="Scripts\React\JSXTransformer.js" />
     <Content Include="Scripts\React\react-with-addons.js" />
     <Content Include="Scripts\React\react-with-addons.min.js" />
@@ -210,6 +212,7 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Scripts\jquery-2.1.4.min.map" />
+    <Content Include="Scripts\React\Common\es5-sham.min.js" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
