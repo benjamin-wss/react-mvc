@@ -1,11 +1,8 @@
-@using System.Web.Http
 @using System.Web.Http.Description
-@using Benjamin.React.MVC.Areas.HelpPage.Models
-@using Benjamin.React.MVC.Areas.HelpPage.ModelDescriptions
-@model HelpPageApiModel
+@model Benjamin.React.MVC.Areas.HelpPage.Models.HelpPageApiModel
 
 @{
-    ApiDescription description = Model.ApiDescription;
+    var description = Model.ApiDescription;
 }
 <h1>@description.HttpMethod.Method @description.RelativePath</h1>
 <div>
